@@ -1,0 +1,103 @@
+body {
+
+    background-image: url('../images/scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.work {
+    display: inline;
+}
+
+h1 {
+    font-size: 50px;
+    color: #323b4c;
+}
+
+.resume {
+    margin-top: 30px;
+    padding: 2px 30px;
+}
+
+.resume-container {
+    flex: 1;
+    max-width: 1000px;
+    height: 100%;
+    margin: 10px auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.resume-list {
+    margin-left: 40px;
+    max-width: 700px;
+}
+
+h2 {
+
+    color: #323b4c;
+}
+
+p {
+    font-size: 16px;
+    color: #323b4c;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #323b4c;
+    color: white;
+    padding: 20px;
+}
+
+/* Adjusted styles for the sidebar content */
+.sidebar-content {
+    padding-left: 20px;
+    margin-top: 60px;
+}
+
+.photo {
+    height: auto;
+
+    margin-top: 50px;
+
+    border-radius: 50%;
+}
+
+.white-line {
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
+.line {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.sidebar-font {
+    color: white;
+}
+
+/* Adjusted styles for the skills list */
+.list-unstyled.sidebar-font li {
+    margin-bottom: 5px;
+}
+
+/* Adjusted styles for the certifications link */
+.sidebar-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer p {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    color: #fff;
+
+}
