@@ -1,0 +1,33 @@
+    /* Add custom styles here */
+    body {
+        background-image: url('../images/scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        /* Text color on top of the background color */
+    }
+
+    /* Center the content vertically */
+    .vertical-center {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Style the jumbotron text */
+
+    .jumbotron-text {
+        text-align: center;
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+       
+    }
+
+    /* Footer styling */
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px 0;
+        color: #fff;
+
+    }
+

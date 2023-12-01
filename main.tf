@@ -1,12 +1,6 @@
 terraform {
     
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.25.0"
-    }
-  }
-   cloud {
+  cloud {
     organization = "edleeennaorg"
 
     workspaces {
@@ -16,13 +10,13 @@ terraform {
 }
 
 provider "aws" {
-
+ 
 }
 
 
-
-resource "aws_s3_bucket" "example" {
-  bucket = "elenadcloudresumeaws"
-  
-  
+module "website_hosting" {
+  source = "./modules/"
+  public_path = var.website.public_path
+  content_version = var.website.content_version
 } 
+
