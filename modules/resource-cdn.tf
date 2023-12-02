@@ -14,6 +14,8 @@ locals {
   s3_origin_id = "MyS3Origin"
 }
 
+
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name              = aws_s3_bucket.website_bucket.bucket_regional_domain_name
@@ -26,7 +28,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   comment             = "Static website hosting for: ${aws_s3_bucket.website_bucket.bucket}"
   default_root_object = "index.html"
 
- # aliases = ["mysite.example.com", "yoursite.example.com"]
+  aliases = [var.custom_domain]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -56,23 +58,25 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  
+   
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn = aws_acm_certificate.cert.arn
+    ssl_support_method  = "sni-only"
   }
 }
 
-resource "terraform_data" "invalidate_cache" {
-  triggers_replace = terraform_data.content_version.output
-
-  provisioner "local-exec" {
-    command = <<COMMAND
-aws cloudfront create-invalidation \
---distribution-id ${aws_cloudfront_distribution.s3_distribution.id} \
---paths '/*'
-    COMMAND
+#resource "terraform_data" "invalidate_cache" {
+# triggers_replace = terraform_data.content_version.output
+#
+#  provisioner "local-exec" {
+#    command = <<COMMAND
+#aws cloudfront create-invalidation \
+#--distribution-id ${aws_cloudfront_distribution.s3_distribution.id} \
+#--paths '/*'
+#    COMMAND
     
-  }
+#  }
 
-}
+#}
+
