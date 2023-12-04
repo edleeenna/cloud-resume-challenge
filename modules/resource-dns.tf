@@ -14,8 +14,7 @@
 resource "aws_acm_certificate" "cert" {
   domain_name       = var.custom_domain
   validation_method = "DNS"
-   provider = aws.us_east
-
+  
   tags = {
     Environment = "test"
   }
