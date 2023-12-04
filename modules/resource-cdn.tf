@@ -26,7 +26,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "Static website hosting for: ${aws_s3_bucket.website_bucket.bucket}"
-  default_root_object = "index.html"
+  default_root_object = "resume"
 
   aliases = [var.custom_domain]
 
