@@ -66,17 +66,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 }
 
+# Cannot get this to work :( , as it is better practice to have this in your CICD pipeline, I will implement that at a later date and just run this command manually
 #resource "terraform_data" "invalidate_cache" {
 # triggers_replace = terraform_data.content_version.output
 #
 #  provisioner "local-exec" {
-#    command = <<COMMAND
-#aws cloudfront create-invalidation \
-#--distribution-id ${aws_cloudfront_distribution.s3_distribution.id} \
-#--paths '/*'
-#    COMMAND
-    
-#  }
+#    command = "aws cloudfront create-invalidation --region us-east-1 --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} --paths '/*'"    
+# }
 
 #}
 

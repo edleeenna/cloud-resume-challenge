@@ -1,7 +1,7 @@
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 resource "aws_s3_bucket" "website_bucket" {
-  bucket = "elenadeencloudresumeaws"
+  bucket = "elenadeencloudresumeaws2"
 
 }
 
@@ -68,6 +68,20 @@ resource "aws_s3_object" "upload_css" {
     ignore_changes = [etag]
   }
 }
+
+resource "aws_s3_object" "upload_js" {
+  for_each = fileset("${var.public_path}/javascript","*.{js}")
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "javascript/${each.key}"
+   content_type = "text/javascript " 
+  source = "${var.public_path}/javascript/${each.key}"
+  etag = filemd5("${var.public_path}/javascript/${each.key}")
+  lifecycle {
+    replace_triggered_by = [terraform_data.content_version.output]
+    ignore_changes = [etag]
+  }
+}
+
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object
 resource "aws_s3_object" "error_html" {
