@@ -69,7 +69,7 @@ resource "aws_lambda_function_url" "test_latest" {
   # Configure CORS settings for the Lambda function URL
   cors {
     allow_credentials = true
-    allow_origins     = ["https://elenadeen.com"]
+    allow_origins     = ["*"]
     allow_methods     = ["*"]
     allow_headers     = ["date", "keep-alive"]
     expose_headers    = ["keep-alive", "date"]

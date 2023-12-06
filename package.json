@@ -1,0 +1,23 @@
+{
+  "name": "cloud-resume-challenge",
+  "version": "1.0.0",
+  "description": "Install terraform locally\r Install AWS CLI",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edleeenna/cloud-resume-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edleeenna/cloud-resume-challenge/issues"
+  },
+  "homepage": "https://github.com/edleeenna/cloud-resume-challenge#readme"
+}

@@ -24,13 +24,4 @@ def lambda_handler(event, context):
     
     # Update the DynamoDB item with the new 'views' count
     response = table.put_item(Item={'id': 1, 'views': views})
-
-    return {
-        'statusCode': 200,
-        'headers': {
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'Access-Control-Allow-Origin': 'https://elenadeen.com',
-            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-        },
-        
-    }
+    return views
