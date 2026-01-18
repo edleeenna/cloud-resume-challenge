@@ -6,8 +6,9 @@
   "dependencies": {
     "http-server": "^14.1.1"
   },
-  "devDependencies": {},
   "scripts": {
+    "build": "tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/output.css --content \"./public/**/*.{html,js}\"",
+    "start": "http-server public -p 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/edleeenna/cloud-resume-challenge/issues"
   },
-  "homepage": "https://github.com/edleeenna/cloud-resume-challenge#readme"
+  "homepage": "https://github.com/edleeenna/cloud-resume-challenge#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
 }

@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "visitor_counter" {
   # Attribute definition for the hash key "id"
   attribute {
     name = "id"
-    type = "S"  # String type
+    type = "N"  # Number type
   }
   
   # Attribute definition for the "views" attribute

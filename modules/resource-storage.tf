@@ -18,6 +18,7 @@ resource "aws_s3_bucket_website_configuration" "website_configuration" {
 
 }
 
+/* At the moment, the resume.html is the index document. This may change if I want to have a landing page.
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object
  resource "aws_s3_object" "index_html" {
  bucket = aws_s3_bucket.website_bucket.bucket
@@ -30,6 +31,7 @@ resource "aws_s3_bucket_website_configuration" "website_configuration" {
    ignore_changes = [ etag ]
   }
 }
+*/
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object
 resource "aws_s3_object" "resume_html" {
@@ -44,6 +46,7 @@ resource "aws_s3_object" "resume_html" {
   }
 }
 
+/* Commenting this out. No longer needed but maybe later
 resource "aws_s3_object" "upload_assets" {
   for_each = fileset("${var.public_path}/images","*.{jpg,png,gif}")
   bucket = aws_s3_bucket.website_bucket.bucket
@@ -55,6 +58,7 @@ resource "aws_s3_object" "upload_assets" {
     ignore_changes = [etag]
   }
 }
+ */
 
 resource "aws_s3_object" "upload_css" {
   for_each = fileset("${var.public_path}/styles","*.{css}")

@@ -1,255 +1,447 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Elena Deen, cloud resume">
-    <meta name="author" content="Elena Deen">
-    <title>Elena Deen - Resume</title>
-    <!-- Add Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome icons -->
-    <script src="https://kit.fontawesome.com/7a7c1628d8.js" crossorigin="anonymous"></script>
-    <!-- Link to your custom styles.css file -->
-    <link href="../styles/resume.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elena Deen - Portfolio</title>
+    <meta name="description" content="Elena Deen - Technical Consultant and Aspiring Cybersecurity Specialist.">
+    <link href="../styles/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-06Q0RFD6JF"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Elena Deen</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-  
-                    <!--<li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>-->
+    gtag('config', 'G-06Q0RFD6JF');
+</script>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/resume">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body class="bg-slate-50 text-slate-600 font-sans antialiased selection:bg-navy selection:text-white">
 
+    <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div class="lg:flex lg:justify-between lg:gap-4">
 
-    <div class="resume-container container mt-3">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="d-flex flex-column h-100">
-                    <div class="row d-flex flex-column h-100">
-                        <div class="sidebar">
+            <!-- Left Column: Fixed Header / Bio -->
+            <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+                <div>
+                    <h1 class="text-4xl font-bold tracking-tight text-navy sm:text-5xl">
+                        <a href="/">Elena Deen</a>
+                    </h1>
+                    <h2 class="mt-3 text-lg font-medium tracking-tight text-navy sm:text-xl">
+                        Technical Consultant
+                    </h2>
+                    <p class="mt-4 max-w-xs leading-normal text-slate">
+                        Bridging the gap between complex business needs and secure technical implementation.
+                    </p>
 
-                            <div class="row mb-5 text-center"> <!-- img Row -->
-                                <img src="../images/me.jpg" alt="picture of person" class="photo">
-                            </div>
-                            <div class="sidebar-content">
-                                <div class="row mb-5"> <!-- Contact Row -->
-                                    <h3>Contact</h3>
-                                    <hr class="white-line">
-                                    <p class="sidebar-font"><i class="fa-solid fa-envelope"></i> edleeenna@gmail.com</p>
-                                    <p class="sidebar-font"><i class="fa-solid fa-location-dot"></i> Melbourne, Australia</p>
-                                    <p class="sidebar-font"><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/elena-deen">www.linkedin.com/in/elena-deen</a> </p>
-                                    </ul>
-                                </div> <!-- End: Contact Row  -->
-                                <div class="row mb-5"> <!-- Education Row -->
-                                    <h3>Education</h3>
-                                    <hr class="white-line">
-                                    <p class="sidebar-font">Bachelor of Computer Science (Software Development)</p>
-                                    <p class="sidebar-font">Swinburne University of Technology, 2018</p>
-                                </div>
-                                <div class="row mb-5"> <!-- Skills Row -->
-                                    <h3>Skills</h3>
-                                    <hr class="white-line">
-                                    <ul class="list-unstyled sidebar-font">
-                                        <li>Business/System Analysis</li>
-                                        <li>XML/XBRL Web services</li>
-                                        <li>C#/ .Net Development</li>
-                                        <li>Web Development (HTML, CSS, Javascript)</li>
-                                        <li>Agile Methodology</li>
-                                        <li>AWS Cloud Foundations</li>
-                                    </ul>
-                                </div> <!-- End: Skills Row  -->
-                                <div class="row mb-5"> <!-- Certifications Row -->
-                                    <h3>Certifications</h3>
-                                    <hr class="white-line">
-                                    <p class="sidebar-font"><a
-                                            href="https://www.credly.com/badges/6837dfa2-41e8-4766-bdb6-26bc18211ab9"
-                                            class="text-white">AWS Certified Cloud Practitioner</a></p>
-                                    <p class="sidebar-font">Achieved: 30th June 2022</p>
-                                </div> <!-- End: Certifications Row  -->
-                            </div> <!-- End: sidebar-content -->
-                        </div> <!-- End: sidebar  -->
+                    <!-- Status Badge -->
+                    <div
+                        class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        Open for opportunities
                     </div>
-                </div> <!-- End: d-flex -->
-            </div> <!-- End: col-md-4  -->
 
-            <div class="col-md-9 resume">
-                <div class="d-flex flex-column h-100">
-                    <div class="row">
-                        <div class="row resume"> <!-- Contact Row -->
-                            <header>
-                                <h1>Elena Deen</h1>
-                                <strong>
-                                    <p>APPLICATION DEVELOPER</p>
-                                </strong>
-                                <p>This resume was created as part of the <a
-                                        href="https://cloudresumechallenge.dev/docs/the-challenge/aws/">cloud resume
-                                        challenge</a>. You are visitor  
-                                        <span id="visitorCount">loading...</span>
-                                </p>
-                                <p>
-                                    Highly motivated technology professional with a proven track record in the industry
-                                    and
-                                    a
-                                    strong
-                                    background in computer science and software development. Successfully held roles as
-                                    a
-                                    PMO
-                                    and
-                                    test
-                                    specialist, and currently excelling as a Business Analyst and Developer specializing
-                                    in
-                                    the
-                                    development of XML web services for tax data validation and transformation. Keenly
-                                    interested in
-                                    web development and cloud technologies, actively seeking opportunities to further
-                                    enhance
-                                    expertise
-                                    and skills in these domains.
-                                </p>
-                            </header>
-                        </div>
-
-                        <div class="resume">
-
-                            <h2>Experience</h2>
-                            <hr class="line">
-                            <h3 class="work">IBM Australia</h3>
-                            <p class="work">(2018 - Present)</p>
-                            <div class="row"> <!-- Start: System Analyst row -->
-                                <p><strong>Systems Analyst (Message Designer) / Application Developer at IBM</strong>
-                                    (2020-Present)
-                                </p>
-                                <ul class="resume-list">
-                                    <li>Design and development of XML web services that validate and transform data</li>
-                                    <li>Requirements analysis and refine requirements into technical actionable items
-                                    </li>
-                                    <li>Prepare and maintain design documents for internal use</li>
-                                    <li>Prepare design documents such as message structure table, validation rules and
-                                        code
-                                        zips
-                                        for
-                                        external publication</li>
-                                    <li>Leverage C#/.Net development to translate design into code.</li>
-                                    <li>Work within an agile development team for effective delivery</li>
-                                    <li>Gain valuable exposure to AWS Cloud</li>
-                                    <li>Highlights:
-                                        <ul>
-                                            <li>Successfully rolled over existing services to work for a new tax year:
-                                                e.g.
-                                                Individual
-                                                Income Tax Return, Trust Tax Return, Partnership Tax Return</li>
-                                            <li>Update xml/xbrl messages for new legislative changes: e.g. Small
-                                                Business
-                                                Boost,
-                                                JobKeeper
-                                            </li>
-                                            <li>Successfully converted multiple services from XBRL to XML. e.g Trust Tax
-                                                Return,
-                                                Attribution
-                                                Managed Investment Trust</li>
-                                            <li>Involved in the creation of a new schedule Loss Carry Back which is
-                                                submitted
-                                                with
-                                                the
-                                                Company Tax Return</li>
-                                        </ul>
-                                    </li>
-                                    <li>Utilize tools such as Microsoft excel to maintain design documents, Visual
-                                        Studio to
-                                        work
-                                        with code,
-                                        TFS for version control</li>
-                                </ul>
-                            </div> <!-- End: System Analyst row -->
-                            <div class="row">
-                                <p><strong>Test Specialist at IBM</strong> (2019-2020)</p>
-                                <ul class="resume-list">
-                                    <li>Scenario and componant based testing of C# code for XML and XBRL web services
-                                    </li>
-                                    <li>Creation of XML and XBRL payloads to test validation and transformation of data
-                                    </li>
-                                    <li>Test Case creation and automation. Test cases are written in XML and run through
-                                        a
-                                        custom
-                                        test
-                                        automation tool</li>
-                                    <li>Manual testing using SoapUI</li>
-                                    <li>Routinely reviewed developer's unit tests to ensure sufficient coverage.</li>
-                                    <li>Highlights:
-                                        <ul>
-                                            <li>Was involved in the rigorous testing of the new Income Details schedule
-                                                which
-                                                allows
-                                                tax
-                                                agents to capture income details at a granular level. This form is
-                                                submitted
-                                                with
-                                                the
-                                                Individual Income Tax Return</li>
-                                            <li>Tested multiple changes for the Single Touch Payroll service</li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <p><strong>Project Management Officer at IBM</strong> (2018-2019)</p>
-                                <ul class="resume-list">
-                                    <li>Compiled weekly labour compliance report for project managers to ensure people
-                                        are
-                                        claiming
-                                        time
-                                        correctly.</li>
-                                    <li>Initiate onboarding and offboarding of people to and from the account.</li>
-                                    <li>Involved in financial tracking and forecasting.</li>
-                                    <li>Leave tracking and management for account employees</li>
-                                    <li>Completion of regular Data Security and Privacy tasks such as workplace security
-                                        checks
-                                        and
-                                        system
-                                        access tracking</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Desktop Navigation -->
+                    <nav class="nav hidden lg:block" aria-label="In-page jump links">
+                        <ul class="mt-16 w-max">
+                            <li>
+                                <a class="group flex items-center py-3 active" href="#about">
+                                    <span
+                                        class="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-navy"></span>
+                                    <span
+                                        class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-navy">About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3" href="#experience">
+                                    <span
+                                        class="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-navy"></span>
+                                    <span
+                                        class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-navy">Experience</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3" href="#projects">
+                                    <span
+                                        class="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-navy"></span>
+                                    <span
+                                        class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-navy">Featured
+                                        Project</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3" href="#education">
+                                    <span
+                                        class="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-navy"></span>
+                                    <span
+                                        class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-navy">Education
+                                        & Certs</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
+
+                <!-- Social Links -->
+                <div class="ml-1 mt-8 flex items-center gap-5">
+
+                    <a href="https://www.linkedin.com/in/elena-deen" target="_blank"
+                        class="text-slate-400 hover:text-navy transition-colors" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Right Column: Content -->
+            <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
+
+                <!-- About Section -->
+                <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+                    <p class="mb-4 text-lg leading-relaxed text-slate-700">
+                        I am a technical professional with over six years of experience across the software development lifecycle, delivering solutions for large-scale public sector clients. I have hands-on experience in development, testing, and system analysis, with a strong focus on secure, scalable, and reliable solutions.
+                    </p>
+                    <p class="mb-4 text-lg leading-relaxed text-slate-700">
+                       I am actively expanding my expertise in 
+                        <strong class="font-medium text-navy">Cybersecurity</strong> and <strong
+                            class="font-medium text-navy">Cloud Architecture</strong>, applying a risk-aware, systems-thinking mindset to projects that involve identity management, access control, and compliance.
+                    <p class="text-lg leading-relaxed text-slate-700">
+                        I am seeking opportunities where I can combine my technical skills and security knowledge to make an impact.
+                    </p>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-navy mb-8 lg:hidden">Experience</h3>
+
+                    <ol class="group/list space-y-12">
+
+                        <!-- Job 1 -->
+                        <li class="mb-12">
+                            <div
+                                class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+
+                                <header
+                                    class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
+                                    2024 — 2025
+                                </header>
+                                <div class="z-10 sm:col-span-6">
+                                    <h3 class="font-medium leading-snug text-navy">
+                                        <div>
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-navy hover:text-blue-600 focus-visible:text-blue-600 group/link"
+                                                href="#">
+                                                <span
+                                                    class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                <span>System Analyst · Government Client</span>
+                                            </a>
+                                        </div>
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-normal text-slate-600">
+                                        Conducted technical requirement analysis for a Staff Support Tool — a Java
+                                        full-stack (Angular) web application used by over 1,100 staff to support
+                                        services for more than 26 million Australians. Applied a security-first approach
+                                        to system design, including role-based access control (RBAC), identity
+                                        management, and account remediation workflows. Collaborated with UI/UX,
+                                        development, and business stakeholders in an agile delivery environment.
+                                    </p>
+                                    <ul class="mt-2 flex flex-wrap">
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Security Analysis</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                User stories</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Angular</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Java</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Technical Specs writing</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Jira</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Government</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Job 2 -->
+                        <li class="mb-12">
+                            <div
+                                class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+
+                                <header
+                                    class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
+                                    2023 — 2024
+                                </header>
+                                <div class="z-10 sm:col-span-6">
+                                    <h3 class="font-medium leading-snug text-navy">
+                                        <div>
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-navy hover:text-blue-600 focus-visible:text-blue-600 group/link"
+                                                href="#">
+                                                <span
+                                                    class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                <span>Gen AI Advocate | Proposal work · IBM Internal</span>
+                                            </a>
+                                        </div>
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-normal text-slate-600">
+                                        Analysed Gen AI assistants of IBM's internal Gen AI tool to improve technical
+                                        productivity. Assisted in creating learning materials and videos demonstrating
+                                        Gen AI usage for the SDLC. Also assisted with multiple internal bidding and proposal
+                                        pieces.
+                                    </p>
+                                    <ul class="mt-2 flex flex-wrap">
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Generative AI</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Prompt Engineering</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Powerpoint</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Job 3 -->
+                        <li class="mb-12">
+                            <div
+                                class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                <div
+                                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-50/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
+                                </div>
+                                <header
+                                    class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
+                                    2019 — 2023
+                                </header>
+                                <div class="z-10 sm:col-span-6">
+                                    <h3 class="font-medium leading-snug text-navy">
+                                        <div>
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-navy hover:text-blue-600 focus-visible:text-blue-600 group/link"
+                                                href="#">
+                                                <span
+                                                    class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                <span>Tech BA | Developer | Tester · Government Client </span>
+                                            </a>
+                                        </div>
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-normal text-slate-600">
+                                        Throughout my tenure, I worked across the development lifecycle as a BA, developer, tester. Specialised
+                                        in design of XML Soap web services. Leveraged C# .NET to implement schemas, validation and transformation for
+                                        web services.
+                                    </p>
+                                    <ul class="mt-2 flex flex-wrap">
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                C# .NET</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                XML/XBRL</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                TFS</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Agile</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Message Design</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Business Analysis</div>
+                                        </li>
+                                        <li class="mr-1.5 mt-2">
+                                            <div
+                                                class="flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-600">
+                                                Government</div>
+                                        </li>
+                                   
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ol>
+                </section>
+
+                <!-- Featured Project -->
+                <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-navy mb-8 lg:hidden">Projects</h3>
+
+                    <div class="grid gap-6 sm:grid-cols-8 md:gap-8">
+                        <div
+                            class="sm:col-span-8 bg-white rounded-md shadow-sm p-6 hover:shadow-lg transition-shadow duration-300">
+
+                            <!-- Project Title -->
+                            <h3 class="font-medium text-navy text-lg mb-2">
+                                <a href="https://cloudresumechallenge.dev/" target="_blank"
+                                    class="hover:text-blue-600 underline">
+                                    The Cloud Resume Challenge (This Website)
+                                </a>
+                            </h3>
+
+                            <!-- Project Description -->
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                You are visitor <span id="visitorCount">loading...</span><br>
+                                This website was created as part of the
+                                <a href="https://cloudresumechallenge.dev/" target="_blank"
+                                    class="text-blue-600 hover:text-blue-700 underline">
+                                    Cloud Resume Challenge
+                                </a>.
+                                It is built with HTML, CSS, JavaScript, and deployed on AWS using services such as S3,
+                                CloudFront, Lambda, DynamoDB, and API Gateway. Terraform was used for infrastructure as
+                                code.
+                            </p>
+
+                            <!-- Project Badges -->
+                            <div class="mt-4 flex flex-wrap gap-4 text-xs text-slate-500">
+                                <div class="flex items-center gap-1">
+                                    <svg width="14" height="14" viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none">
+
+                                        <g fill="#000000">
+
+                                            <path
+                                                d="M4.51 7.687c0 .197.02.357.058.475.042.117.096.245.17.384a.233.233 0 01.037.123c0 .053-.032.107-.1.16l-.336.224a.255.255 0 01-.138.048c-.054 0-.107-.026-.16-.074a1.652 1.652 0 01-.192-.251 4.137 4.137 0 01-.164-.315c-.416.491-.937.737-1.565.737-.447 0-.804-.129-1.064-.385-.261-.256-.394-.598-.394-1.025 0-.454.16-.822.484-1.1.325-.278.756-.416 1.304-.416.18 0 .367.016.564.042.197.027.4.07.612.118v-.39c0-.406-.085-.689-.25-.854-.17-.166-.458-.246-.868-.246-.186 0-.377.022-.574.07a4.23 4.23 0 00-.575.181 1.525 1.525 0 01-.186.07.326.326 0 01-.085.016c-.075 0-.112-.054-.112-.166v-.262c0-.085.01-.15.037-.186a.399.399 0 01.15-.113c.185-.096.409-.176.67-.24.26-.07.537-.101.83-.101.633 0 1.096.144 1.394.432.293.288.442.726.442 1.314v1.73h.01zm-2.161.811c.175 0 .356-.032.548-.096.192-.064.362-.182.505-.342a.848.848 0 00.181-.341c.032-.129.054-.283.054-.465V7.03a4.43 4.43 0 00-.49-.09 3.996 3.996 0 00-.5-.033c-.357 0-.617.07-.793.214-.176.144-.26.347-.26.614 0 .25.063.437.196.566.128.133.314.197.559.197zm4.273.577c-.096 0-.16-.016-.202-.054-.043-.032-.08-.106-.112-.208l-1.25-4.127a.938.938 0 01-.048-.214c0-.085.042-.133.127-.133h.522c.1 0 .17.016.207.053.043.032.075.107.107.208l.894 3.535.83-3.535c.026-.106.058-.176.101-.208a.365.365 0 01.213-.053h.426c.1 0 .17.016.212.053.043.032.08.107.102.208l.84 3.578.92-3.578a.459.459 0 01.107-.208.347.347 0 01.208-.053h.495c.085 0 .133.043.133.133 0 .027-.006.054-.01.086a.768.768 0 01-.038.133l-1.283 4.127c-.031.107-.069.177-.111.209a.34.34 0 01-.203.053h-.457c-.101 0-.17-.016-.213-.053-.043-.038-.08-.107-.101-.214L8.213 5.37l-.82 3.439c-.026.107-.058.176-.1.213-.043.038-.118.054-.213.054h-.458zm6.838.144a3.51 3.51 0 01-.82-.096c-.266-.064-.473-.134-.612-.214-.085-.048-.143-.101-.165-.15a.38.38 0 01-.031-.149v-.272c0-.112.042-.166.122-.166a.3.3 0 01.096.016c.032.011.08.032.133.054.18.08.378.144.585.187.213.042.42.064.633.064.336 0 .596-.059.777-.176a.575.575 0 00.277-.508.52.52 0 00-.144-.373c-.095-.102-.276-.193-.537-.278l-.772-.24c-.388-.123-.676-.305-.851-.545a1.275 1.275 0 01-.266-.774c0-.224.048-.422.143-.593.096-.17.224-.32.384-.438.16-.122.34-.213.553-.277.213-.064.436-.091.67-.091.118 0 .24.005.357.021.122.016.234.038.346.06.106.026.208.052.303.085.096.032.17.064.224.096a.461.461 0 01.16.133.289.289 0 01.047.176v.251c0 .112-.042.171-.122.171a.552.552 0 01-.202-.064 2.428 2.428 0 00-1.022-.208c-.303 0-.543.048-.708.15-.165.1-.25.256-.25.475 0 .149.053.277.16.379.106.101.303.202.585.293l.756.24c.383.123.66.294.825.513.165.219.244.47.244.748 0 .23-.047.437-.138.619a1.435 1.435 0 01-.388.47c-.165.133-.362.23-.591.299-.24.075-.49.112-.761.112z" />
+
+                                            <path fill-rule="evenodd"
+                                                d="M14.465 11.813c-1.75 1.297-4.294 1.986-6.481 1.986-3.065 0-5.827-1.137-7.913-3.027-.165-.15-.016-.353.18-.235 2.257 1.313 5.04 2.109 7.92 2.109 1.941 0 4.075-.406 6.039-1.239.293-.133.543.192.255.406z"
+                                                clip-rule="evenodd" />
+
+                                            <path fill-rule="evenodd"
+                                                d="M15.194 10.98c-.223-.287-1.479-.138-2.048-.069-.17.022-.197-.128-.043-.24 1-.705 2.645-.502 2.836-.267.192.24-.053 1.89-.99 2.68-.143.123-.281.06-.217-.1.212-.53.686-1.72.462-2.003z"
+                                                clip-rule="evenodd" />
+
+                                        </g>
+
+                                    </svg>
+                                    Deployed on AWS
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg fill="#000000" width="14" height="14" viewBox="0 0 32 32"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.041 5.688l9.912 5.031v10.073l-9.912-5.037zM22.041 10.719v10.073l9.917-5.037v-10.067zM0.047 0.068v10.068l9.912 5.036v-10.068zM11.041 26.921l9.912 5.037v-10.063l-9.912-5.036z" />
+                                    </svg>
+                                    Managed with Terraform
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education & Certs -->
+                <section id="education" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-navy mb-8 lg:hidden">Education</h3>
+
+                    <div class="grid gap-8 sm:grid-cols-2">
+                        <div>
+                            <h4 class="font-bold text-navy text-sm uppercase mb-4 border-b border-slate-200 pb-2">
+                                Certifications</h4>
+                            <ul class="space-y-4">
+                                <li class="text-sm">
+                                    <div class="font-bold text-navy">Certified in Cybersecurity (CC)</div>
+                                    <div class="text-slate-500">ISC2 • 2024-2027</div>
+                                </li>
+                                <li class="text-sm">
+                                    <div class="font-bold text-navy">AWS Certified AI Practitioner</div>
+                                    <div class="text-slate-500">Amazon Web Services • 2024-2027</div>
+                                </li>
+                                <li class="text-sm">
+                                    <div class="font-bold text-navy">AWS Cloud Practitioner</div>
+                                    <div class="text-slate-500">Amazon Web Services • 2022-2028</div>
+                                </li>
+                                <li class="text-sm">
+                                    <div class="font-bold text-navy">Azure AI Fundamentals</div>
+                                    <div class="text-slate-500">Microsoft • 2024</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-sm uppercase mb-4 border-b border-slate-200 pb-2">
+                                Education</h4>
+                            <ul class="space-y-4">
+                                <li class="text-sm">
+                                    <div class="font-bold text-navy">Grad Cert. Cyber Security</div>
+                                    <div class="text-slate-500">Charles Sturt University</div>
+                                    <div class="text-xs text-blue-600 font-medium mt-1">Expected 2026</div>
+                                </li>
+                                <li class="text-sm">
+                                    <div class="font-bold text-navy">Bachelor of Computer Science (Software Development)
+                                    </div>
+                                    <div class="text-slate-500">Swinburne University</div>
+                                    <div class="text-xs text-slate-400 mt-1">2018</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+                    <p>Built with <strong class="font-medium text-navy">HTML & Tailwind</strong>. Deployed on <strong
+                            class="font-medium text-navy">AWS</strong>.</p>
+                </footer>
+
+            </main>
         </div>
     </div>
-
-    <!-- Bootstrap JS and Popper.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../javascript/visitor_count.js"></script>
-    <footer class="text-center mt-3">
-        <p>Author: Elena Deen</p>
-        <p>
-            Image by <a
-              href="https://www.freepik.com/free-photo/scenic-mountains-landscape-after-rain-carpathians-ukraine_10001568.htm#query=mountain%20trees&position=0&from_view=keyword&track=ais&uuid=16f6827d-d6e4-4d43-9094-df0da1ba2637"
-              target="_blank">standret</a> on Freepik
-          </p>
-    </footer>
 </body>
 
 </html>

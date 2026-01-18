@@ -3,7 +3,7 @@
 
 
 resource "aws_cloudfront_origin_access_control" "default" {
-  name                              = "OAC ${aws_s3_bucket.website_bucket.bucket}"
+  name                              = "OAC-${aws_s3_bucket.website_bucket.bucket}-2"
   description                       = "Origin Access Controls for Static Website Hosting ${aws_s3_bucket.website_bucket.bucket}"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
@@ -67,12 +67,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 }
 
 # Cannot get this to work :( , as it is better practice to have this in your CICD pipeline, I will implement that at a later date and just run this command manually
-#resource "terraform_data" "invalidate_cache" {
-# triggers_replace = terraform_data.content_version.output
-#
-#  provisioner "local-exec" {
-#    command = "aws cloudfront create-invalidation --region us-east-1 --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} --paths '/*'"    
-# }
+resource "terraform_data" "invalidate_cache" {
+ triggers_replace = terraform_data.content_version.output
 
-#}
+  provisioner "local-exec" {
+    command = "aws cloudfront create-invalidation --region us-east-1 --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} --paths /*"
+  }
+}
 

@@ -12,3 +12,8 @@
    description = "The CloudFront distribution Domain Name"
    value = module.website_hosting.domain_name
  }
+
+ output "lambda_url" {
+   description = "The Lambda function URL"
+   value = module.website_hosting.lambda_url
+ }

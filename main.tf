@@ -1,12 +1,4 @@
 terraform {
-    
-  cloud {
-    organization = "edleeennaorg"
-
-    workspaces {
-      name = "cloud-resume-aws"
-    }
-  }
 }
 
 module "website_hosting" {
