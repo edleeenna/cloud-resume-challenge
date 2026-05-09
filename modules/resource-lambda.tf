@@ -56,7 +56,7 @@ resource "aws_lambda_function" "test_lambda" {
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
   # Specify the runtime for the Lambda function
-  runtime = "python3.10"
+  runtime = "python3.11"
 }
 
 # Resource block defining a URL for the AWS Lambda function (test_latest)
