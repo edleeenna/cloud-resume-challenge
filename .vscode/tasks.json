@@ -7,6 +7,14 @@
 			"problemMatcher": [],
 			"label": "npm: start",
 			"detail": "http-server public -p 8080"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/output.css --content \"./public/**/*.{html,js}\""
 		}
 	]
 }

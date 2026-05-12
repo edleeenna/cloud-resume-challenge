@@ -26,3 +26,5 @@ terraform.rc
 
 node_modules
 visitorCount.zip
+DESIGN_UPDATES.md
+.DS_STORE
